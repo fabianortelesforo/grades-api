@@ -12,7 +12,10 @@ import { db } from './models/index.js';
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
+
+    console.log('Conectado no Mongo com sucesso');
   } catch (error) {
+    console.log('Erro ao conectar no MongoDB');
     process.exit();
   }
 })();
@@ -34,4 +37,6 @@ app.get('/', (req, res) => {
   res.send('API em execucao');
 });
 
-app.listen(process.env.PORT || 8081, () => {});
+app.listen(process.env.PORT || 8081, () => {
+  console.log(`Servidor em execucao`);
+});
