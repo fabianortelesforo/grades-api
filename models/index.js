@@ -1,6 +1,9 @@
 import mongoose from 'mongoose';
 
-import { gradeModel } from './gradeModel.js';
+import gradeModel from './gradeModel.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const db = {};
 db.mongoose = mongoose;
